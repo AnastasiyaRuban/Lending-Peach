@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'index.[contenthash].js',
-    // assetModuleFilename: 'assets/images/[name][ext]',
+    assetModuleFilename: 'assets/images/[name][ext]',
   },
   module: {
     rules: [
@@ -22,14 +22,6 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-      // {
-      //   test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-      //   type: 'asset/inline',
-      // },
       {
         test: /\.(scss|css)$/,
         use: [
@@ -40,7 +32,11 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)$/i,
+        test: /\.html$/,
+        use: 'html-loader',
+      },
+      {
+        test: /\.(jpg|png|svg|jpeg|gif)$/,
         type: 'asset/resource',
       },
     ],
@@ -77,7 +73,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
-    // new CopyWebpackPlugin([{ from: 'src/images', to: 'assets/images' }]),
   ],
   devServer: {
     watchFiles: path.resolve(__dirname, 'src'),
