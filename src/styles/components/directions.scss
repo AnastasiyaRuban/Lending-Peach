@@ -1,0 +1,80 @@
+.directions {
+    margin-bottom: 200px;
+    text-align: center;
+    &__title {
+        margin-bottom: 55px;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 1;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 22px;
+        column-gap: 20px;
+        text-align: left;
+    }
+
+    &__items {
+        min-height: 260px;
+    }
+}
+
+.direction {
+    position: relative;
+    &__content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 28px 20px;
+        color: $colorWhite;
+        background-color: rgba($color: #000, $alpha: 0.6);
+    }
+
+    &__title {
+        max-width: 356px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    &__description {
+        max-width: 480px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.4;
+    }
+}
+
+.solutions,
+.security,
+.import,
+.cloud-solutions,
+.transformation,
+.support {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.solutions {
+    background-image: url("../images/directions/solutions.png");
+}
+.security {
+    background-image: url("../images/directions/security.png");
+}
+.import {
+    background-image: url("../images/directions/import.png");
+}
+.cloud-solutions {
+    background-image: url("../images/directions/cloud-solutions.png");
+}
+.transformation {
+    background-image: url("../images/directions/transformation.png");
+}
+.support {
+    background-image: url("../images/directions/support.png");
+}

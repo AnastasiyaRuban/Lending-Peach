@@ -26,10 +26,10 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
-      {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: 'asset/inline',
-      },
+      // {
+      //   test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+      //   type: 'asset/inline',
+      // },
       {
         test: /\.(scss|css)$/,
         use: [
@@ -39,10 +39,10 @@ module.exports = {
           'sass-loader',
         ],
       },
-      // {
-      //   test: /\.(woff2?|eot|ttf|otf)$/i,
-      //   type: 'asset/resource',
-      // },
+      {
+        test: /\.(woff2?|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [

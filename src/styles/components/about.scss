@@ -1,9 +1,12 @@
 .about-us {
   padding-top: 100px;
   padding-bottom: 100px;
+  background-color: aquamarine;
 
   &__description {
-    padding: 99px 70px;
+    // padding: 99px 70px;
+    margin: 0 auto;
+    max-width: 890px;
     font-weight: 600;
     font-size: 32px;
     line-height: 1.2;

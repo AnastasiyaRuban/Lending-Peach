@@ -1,0 +1,46 @@
+.achievements {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__list {
+    margin: 0 auto;
+    max-width: 890px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: bisque;
+  }
+
+  &__item-container {
+    max-width: 245px;
+    border: 1px solid green;
+  }
+  &__item {
+  }
+
+  &__item:nth-child(-n + 3) {
+    flex: 0 0 33%;
+    margin-bottom: 80px;
+  }
+  &__item:nth-last-child(-n + 2) {
+    flex: 0 0 50%;
+
+    margin-left: auto;
+  }
+}
+
+.achievement {
+  &__title {
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 0.8;
+    color: $colorBordo;
+    opacity: 0.95;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
