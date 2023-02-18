@@ -1,0 +1,60 @@
+.compensation {
+    text-align: center;
+    margin-bottom: 500px;
+    &__title {
+        margin-bottom: 50px;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 1;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 17px;
+        margin-bottom: 140px;
+    }
+
+    &__item svg {
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.1;
+    }
+}
+.motivation {
+    &__title {
+        margin-bottom: 4px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    &__title-colored {
+        display: inline-block;
+        margin-bottom: 50px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 1.2;
+        color: $colorRed;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    &__item svg {
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.1;
+    }
+}
