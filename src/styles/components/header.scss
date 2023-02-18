@@ -1,0 +1,11 @@
+.header {
+  @include flex-all-sb;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__logo {
+    margin-right: 20px;
+  }
+}
