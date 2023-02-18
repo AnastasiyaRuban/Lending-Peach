@@ -45,13 +45,14 @@
 
 @mixin button {
   width: fit-content;
-  padding: 13px 20px;
-  background-color: $colorOrange;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
+  padding: 18px 28px;
   align-items: center;
+  background-color: $colorRed;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
   border: 3px solid transparent;
+  border-radius: 8px;
   color: $colorwhite;
 }
 

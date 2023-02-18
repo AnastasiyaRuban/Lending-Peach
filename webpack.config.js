@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -12,7 +13,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'index.[contenthash].js',
-    assetModuleFilename: 'assets/images/[name][ext]',
+    // assetModuleFilename: 'assets/images/[name][ext]',
   },
   module: {
     rules: [
@@ -38,10 +39,10 @@ module.exports = {
           'sass-loader',
         ],
       },
-      {
-        test: /\.(woff2?|eot|ttf|otf)$/i,
-        type: 'asset/resource',
-      },
+      // {
+      //   test: /\.(woff2?|eot|ttf|otf)$/i,
+      //   type: 'asset/resource',
+      // },
     ],
   },
   plugins: [
@@ -65,6 +66,10 @@ module.exports = {
               source: path.join('src', 'fonts'),
               destination: 'dist/assets/fonts',
             },
+            {
+              source: path.join('src', 'images'),
+              destination: 'dist/assets/images',
+            },
           ],
         },
       },
@@ -72,6 +77,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
+    // new CopyWebpackPlugin([{ from: 'src/images', to: 'assets/images' }]),
   ],
   devServer: {
     watchFiles: path.resolve(__dirname, 'src'),
