@@ -1,5 +1,5 @@
 .achievements {
-  padding-top: 100px;
+  padding-top: 97px;
   padding-bottom: 100px;
 
   &__list {
@@ -15,32 +15,51 @@
     max-width: 245px;
     border: 1px solid green;
   }
-  &__item {
-  }
 
   &__item:nth-child(-n + 3) {
-    flex: 0 0 33%;
-    margin-bottom: 80px;
+    margin-bottom: 78px;
   }
   &__item:nth-last-child(-n + 2) {
     flex: 0 0 50%;
-
     margin-left: auto;
   }
 }
 
 .achievement {
   &__title {
+    margin-bottom: 4px;
     font-weight: 600;
     font-size: 80px;
     line-height: 0.8;
     color: $colorBordo;
     opacity: 0.95;
   }
+  &__title-small {
+    font-size: 64px;
+  }
 
   &__description {
+    max-width: 240px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
   }
+}
+
+.achievement:last-child,
+.achievement::nth-last-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.achievement::nth-last-child(2) {
+  padding-left: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.achievement:last-child {
+  padding-right: 41px;
+  display: flex;
+  justify-content: center;
 }

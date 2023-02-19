@@ -1,11 +1,13 @@
 .header {
   @include flex-all-sb;
+  min-height: 84px;
   flex-wrap: wrap;
   gap: 16px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 27px;
+  padding-bottom: 27px;
 
   &__logo {
     margin-right: 20px;
+    transform: translateY(2px);
   }
 }

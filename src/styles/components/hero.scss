@@ -11,16 +11,13 @@
   }
 
   &__title {
-    // font-family: "TTFirsNeueBold";
     margin-bottom: 60px;
-    font-size: 56px;
-    line-height: 1;
-    font-weight: 600;
   }
 
   &__button {
     @include button;
-    padding: 13px 20px;
+    min-height: 56px;
+    padding: 13px 19px;
     // &:hover {
     //   background-color: $colorFocus;
     // }

@@ -1,0 +1,27 @@
+.corporate-life {
+  position: relative;
+  &__title {
+    margin-bottom: 50px;
+    opacity: 0.4;
+  }
+
+  &__buttons {
+    width: 150px;
+    height: 56px;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    right: 60px;
+    top: 5px;
+  }
+
+  &_swiper {
+  }
+
+  &__slide {
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
