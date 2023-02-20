@@ -1,4 +1,8 @@
 const tabBtns = document.querySelectorAll('.tabs__button');
+const selectBtn = document.querySelector('.select__placeholder');
+const list = document.querySelector('.select__options');
+const map = document.querySelector('.offices__map');
+const tabs = document.querySelector('.tabs');
 
 tabBtns.forEach((element) => {
   const tabName = element.getAttribute('data-tab-name');
@@ -16,4 +20,17 @@ tabBtns.forEach((element) => {
       } else map.classList.remove('offices__map-active');
     });
   });
+});
+
+selectBtn.addEventListener('click', () => {
+  tabBtns.forEach((btn) => {
+    if (!btn.getAttribute('disabled')) {
+      btn.setAttribute('disabled', true);
+    } else btn.removeAttribute('disabled');
+  });
+
+  selectBtn.classList.toggle('active');
+  list.classList.toggle('active');
+  map.classList.toggle('open');
+  tabs.classList.toggle('open');
 });

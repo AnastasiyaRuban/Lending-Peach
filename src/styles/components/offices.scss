@@ -1,16 +1,15 @@
 .offices {
+    position: relative;
     padding-top: 50px;
     padding-bottom: 50px;
     &__menu {
         @include flex-all-sb;
+        position: relative;
         min-height: 80px;
     }
 
     &__select {
         margin-right: 20px;
-    }
-
-    &__tabs {
     }
 
     &__map {
@@ -19,6 +18,7 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 87px;
+        transition: all 0.3s ease-in-out;
     }
 
     &__map img:not(.offices__map-active) {
@@ -27,6 +27,8 @@
 }
 
 .tabs {
+    z-index: 15;
+    transition: all 0.3s ease-in-out;
     &__button {
         font-weight: 600;
         font-size: 18px;
@@ -49,4 +51,95 @@
     &__button:not(:last-child) {
         margin-right: 30px;
     }
+}
+
+.offices {
+    &__select {
+        // z-index: 10;
+    }
+}
+.select {
+    &__placeholder {
+        position: relative;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 24px;
+        z-index: 10;
+    }
+
+    &__placeholder:after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        right: -55px;
+        width: 20px;
+        height: 12px;
+        background-image: url(../images/rectangle.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__options {
+        position: absolute;
+        padding-top: 100px;
+        left: 0;
+        right: 0;
+        // top: 0;
+        bottom: 0;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        top: -100%;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__options.active {
+        opacity: 1;
+        top: 0;
+    }
+
+    &__list {
+        margin: 0 auto;
+        width: 100%;
+        padding: 30px 70px;
+        min-height: 272px;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+    }
+
+    &__item {
+    }
+}
+
+.option {
+    &__placeholder {
+        display: inline-block;
+        margin-bottom: 10px;
+        // font-family: "Proxima Nova";
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    &__list {
+    }
+
+    &__item {
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.select__placeholder.active:after {
+    transform: rotate(0);
+}
+
+.tabs.open,
+.offices__map.open {
+    opacity: 0.3;
 }
