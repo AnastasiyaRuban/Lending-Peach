@@ -13,12 +13,19 @@
     }
 
     &__map {
+        @include flex-all-center;
         max-width: $containerMaxWidth;
+        min-height: 775px;
         margin: 0 auto;
         padding-left: 30px;
         padding-right: 30px;
         padding-top: 87px;
         transition: all 0.3s ease-in-out;
+        &_plug {
+            display: none;
+            outline: 3px solid $colorBordo;
+            outline-offset: 50px;
+        }
     }
 
     &__map img:not(.offices__map-active) {
@@ -47,6 +54,9 @@
             left: 0;
             background-color: $colorBordo;
         }
+    }
+    &__button:disabled {
+        cursor: not-allowed;
     }
     &__button:not(:last-child) {
         margin-right: 30px;
@@ -111,6 +121,7 @@
     }
 
     &__item {
+        z-index: 50;
     }
 }
 
