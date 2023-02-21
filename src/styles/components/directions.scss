@@ -1,5 +1,8 @@
 .directions {
-    margin-bottom: 200px;
+    padding-bottom: 91px;
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
     text-align: center;
     &__title {
         margin-bottom: 55px;
@@ -22,18 +25,19 @@
     position: relative;
     &__content {
         position: absolute;
-        top: 0;
+        top: 180px;
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 28px 20px;
+        padding: 28px 15px;
         color: $colorWhite;
         background-color: rgba($color: #000, $alpha: 0.6);
+        transition: all 0.3s ease-in-out;
     }
 
     &__title {
         max-width: 356px;
-        margin-bottom: 20px;
+        margin-bottom: 23px;
         font-weight: 600;
         font-size: 24px;
         line-height: 1;
@@ -74,4 +78,8 @@
 }
 .support {
     background-image: url("../images/directions/support.png");
+}
+
+.direction:hover .direction__content {
+    top: 0;
 }

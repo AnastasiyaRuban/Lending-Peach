@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const swiper = new Swiper('.corporate-life_swiper', {
+const swiper = new Swiper('.corporate-life__swiper', {
   modules: [Navigation, Pagination],
   loop: true,
   pagination: {
@@ -16,6 +16,8 @@ const swiper = new Swiper('.corporate-life_swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+console.log(swiper);
 
 const bullets = document.querySelectorAll('.swiper-pagination-bullet');
 console.log(bullets.length);

@@ -1,6 +1,7 @@
 .compensation {
+    padding-top: 90px;
+    padding-bottom: 73px;
     text-align: center;
-    margin-bottom: 100px;
     &__title {
         margin-bottom: 50px;
     }
@@ -9,11 +10,13 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         column-gap: 17px;
-        margin-bottom: 140px;
+        padding: 0 77px;
+        padding-bottom: 67px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     &__item svg {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     &__description {
@@ -23,6 +26,7 @@
     }
 }
 .motivation {
+    padding-top: 70px;
     &__title {
         margin-bottom: 4px;
         font-weight: 600;
@@ -46,7 +50,7 @@
     }
 
     &__item svg {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     &__description {

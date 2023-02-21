@@ -1,17 +1,16 @@
 .mission {
-    padding-top: 50px;
-    margin-bottom: 200px;
+    position: relative;
+    margin-bottom: 50px;
+    background-color: $colorBordo;
     &__container {
+        padding: 139px 0;
         min-height: 471px;
-        position: relative;
-        padding: 140px 68px;
         text-align: center;
-        background-color: $colorBordo;
         color: $colorWhite;
     }
 
-    &__container::after,
-    &__container::before {
+    &::after,
+    &::before {
         content: "";
         position: absolute;
         top: 47px;
@@ -20,23 +19,22 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
-    &__container::after {
+    &::after {
         background-image: url("../images/mission/left-pattern.svg");
         left: 0;
     }
-    &__container::before {
+    &::before {
         background-image: url("../images/mission/right-pattern.svg");
         right: 0;
     }
 
     &__title {
-        margin-bottom: 40px;
+        margin-bottom: 41px;
     }
 
     &__description {
         font-weight: 400;
         font-size: 32px;
-        line-height: 1.5;
-        font-family: "Proxima Nova";
+        line-height: 48px;
     }
 }

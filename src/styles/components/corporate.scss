@@ -1,7 +1,8 @@
 .corporate-life {
   position: relative;
+  padding-top: 105px;
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 44px;
     opacity: 0.4;
   }
 
@@ -11,8 +12,8 @@
     position: absolute;
     display: flex;
     gap: 20px;
-    right: 60px;
-    top: 5px;
+    right: 61px;
+    top: 105px;
   }
 
   &_swiper {
