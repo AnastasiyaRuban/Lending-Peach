@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+    .directions {
+        &__title {
+        }
+
+        &__list {
+            align-items: start;
+        }
+
+        &__items {
+            min-height: 0;
+        }
+    }
+    .container {
+    }
+    .title {
+    }
+    .list-reset {
+    }
+    .direction {
+        cursor: pointer;
+        &__content {
+            position: relative;
+            padding-top: 15px;
+            top: 0;
+        }
+
+        &__title-wrapper {
+        }
+
+        &__title {
+        }
+
+        &__description {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    }
+    .solutions {
+    }
+    .description {
+    }
+    .security {
+    }
+    .import {
+    }
+    .cloud-solutions {
+    }
+    .transformation {
+    }
+    .support {
+    }
+}

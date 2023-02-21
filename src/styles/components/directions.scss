@@ -89,12 +89,12 @@
     background-image: url("../images/directions/support.png");
 }
 
-.direction:hover .direction__content {
+.direction.open .direction__content {
     top: 0;
     padding-top: 28px;
 }
 
-.direction:hover .direction__title-wrapper {
+.direction.open .direction__title-wrapper {
     height: auto;
     padding-bottom: 20px;
 }
