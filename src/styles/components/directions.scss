@@ -23,13 +23,23 @@
 
 .direction {
     position: relative;
+    overflow: hidden;
+
+    &__title-wrapper {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+    }
+
     &__content {
         position: absolute;
         top: 180px;
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 28px 15px;
+        padding: 0 15px;
+        padding-bottom: 15px;
         color: $colorWhite;
         background-color: rgba($color: #000, $alpha: 0.6);
         transition: all 0.3s ease-in-out;
@@ -37,7 +47,6 @@
 
     &__title {
         max-width: 356px;
-        margin-bottom: 23px;
         font-weight: 600;
         font-size: 24px;
         line-height: 1;
@@ -48,7 +57,6 @@
         font-weight: 400;
         font-size: 17px;
         line-height: 1.4;
-        display: none;
     }
 }
 
@@ -82,26 +90,11 @@
 }
 
 .direction:hover .direction__content {
-    display: block;
     top: 0;
-    padding: 25px 15px;
+    padding-top: 28px;
 }
 
-.direction:hover .direction__content .direction__description {
-    display: block;
-}
-.direction:hover .direction__content .direction__title {
-    margin-bottom: 23px;
-}
-
-.direction__content {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 15px;
-}
-
-.direction__title {
-    margin-bottom: 0;
+.direction:hover .direction__title-wrapper {
+    height: auto;
+    padding-bottom: 20px;
 }

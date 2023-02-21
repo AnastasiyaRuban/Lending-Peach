@@ -12,39 +12,24 @@
   }
 
   &__link {
-    // position: relative;
-    // font-family: "TTFirsNeueRegular";
+    position: relative;
     font-weight: 600;
     font-size: 18px;
     line-height: 20px;
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   z-index: -1;
-    //   top: -6px;
-    //   right: -6px;
-    //   bottom: -6px;
-    //   left: -6px;
-    //   opacity: 0;
-    //   transition: opacity 0.3s ease;
-    //   background-color: $colorFocus;
-    // }
-    // &:hover {
-    //   color: $colorHover;
-    // }
-
-    // &:focus:not(:active)::before {
-    //   opacity: 1;
-    // }
-    // &:focus {
-    //   color: $colorwhite;
-    // }
-    // &:active::before {
-    //   opacity: 0;
-    // }
-    // &:active {
-    //   color: $colorActive;
-    // }
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -6px;
+      right: -6px;
+      bottom: -6px;
+      left: -6px;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    &:hover::before {
+      border-bottom: 1px solid rgba($colorMain, $alpha: 0.5);
+    }
   }
 }

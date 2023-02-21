@@ -18,16 +18,9 @@
     @include button;
     min-height: 56px;
     padding: 13px 19px;
-    // &:hover {
-    //   background-color: $colorFocus;
-    // }
-    // &:active {
-    //   border-color: transparent;
-    //   background-color: $colorActive;
-    // }
-    // &:focus {
-    //   background-color: $colorOrange;
-    //   border-color: $colorActive;
-    // }
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $colorBtnHover;
+    }
   }
 }

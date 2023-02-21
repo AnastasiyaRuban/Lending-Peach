@@ -43,9 +43,11 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 20px;
+        transition: all 0.3s ease-in-out;
         &_active {
             position: relative;
             color: $colorBordo;
+            transition: all 0.3s ease-in-out;
         }
 
         &_active::after {
@@ -56,26 +58,27 @@
             bottom: -30px;
             left: 0;
             background-color: $colorBordo;
+            transition: all 0.3s ease-in-out;
+        }
+        &_active:disabled::after {
+            background-color: $colorMain;
         }
     }
+
+    &__button:hover {
+        color: $colorBordo;
+    }
+
     &__button:disabled {
+        color: inherit;
         cursor: not-allowed;
     }
-    // &__button:not(:last-child) {
-    //     margin-right: 30px;
-    // }
 }
 
-.offices {
-    &__select {
-        // z-index: 10;
-    }
-}
 .select {
     &__placeholder {
         position: relative;
         min-width: 177px;
-        // outline: 1px solid red;
         text-align: left;
         font-weight: 600;
         font-size: 24px;
@@ -123,7 +126,7 @@
         min-height: 272px;
         display: flex;
         justify-content: space-between;
-        background-color: white;
+        background-color: $colorWhite;
     }
 
     &__item {
