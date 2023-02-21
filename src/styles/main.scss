@@ -5,7 +5,7 @@
 @import "settings";
 @import "vendor";
 
-// подключения стилей больших компонентов компонентов страницы
+// подключение стилей больших компонентов компонентов страницы
 @import "./components/header";
 @import "./components/hero";
 @import "./components/about";
@@ -14,9 +14,10 @@
 @import "./components/mission";
 @import "./components/directions";
 @import "./components/compensation";
-@import "./components/contacts";
 @import "./components/corporate";
 
-// подключения стилей маленьких компонентов компонентов страницы
+// подключение стилей маленьких компонентов компонентов страницы
 @import "./components/nav";
-@import "./components/teg";
+
+// подлючение стилей медиазапросов
+@import "./breakpoints/media.scss";
