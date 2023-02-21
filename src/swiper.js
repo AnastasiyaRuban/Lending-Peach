@@ -24,7 +24,10 @@ console.log(bullets.length);
 
 bullets.forEach((bullet) => {
   const parentWidth = bullet.parentNode.getBoundingClientRect().width;
-  bullet.style.width = `${
+  console.log(parentWidth);
+  const bulletWidth = `${
     (parentWidth - (bullets.length - 1) * 10) / bullets.length
   }px`;
+  bullet.style.width = bulletWidth;
+  console.log(bulletWidth);
 });

@@ -48,6 +48,7 @@
         font-weight: 400;
         font-size: 17px;
         line-height: 1.4;
+        display: none;
     }
 }
 
@@ -81,5 +82,26 @@
 }
 
 .direction:hover .direction__content {
+    display: block;
     top: 0;
+    padding: 25px 15px;
+}
+
+.direction:hover .direction__content .direction__description {
+    display: block;
+}
+.direction:hover .direction__content .direction__title {
+    margin-bottom: 23px;
+}
+
+.direction__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.direction__title {
+    margin-bottom: 0;
 }

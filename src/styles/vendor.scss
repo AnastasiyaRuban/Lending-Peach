@@ -18,8 +18,22 @@
 }
 
 .swiper-pagination-bullet {
+    // flex: 1 1 100%;
+    // width: auto;
+    height: 6px;
     background: #000000;
     opacity: 0.1;
+}
+
+.swiper-pagination-bullet:not(:last-child) {
+    margin-right: 10px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 3px;
 }
 
 .swiper-pagination-bullet-active {
