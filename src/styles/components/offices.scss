@@ -6,7 +6,11 @@
         @include flex-all-sb;
         position: relative;
         flex-wrap: wrap;
-        min-height: 80px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        min-height: 60px;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
     }
 
     &__select {
@@ -37,6 +41,7 @@
 .tabs {
     @include flex-all-sb;
     min-width: 736px;
+    min-height: 60px;
     z-index: 15;
     transition: all 0.3s ease-in-out;
     &__button {
@@ -120,13 +125,16 @@
     }
 
     &__list {
+        position: relative;
         margin: 0 auto;
         width: 100%;
         padding: 30px 70px;
         min-height: 272px;
         display: flex;
         justify-content: space-between;
-        background-color: $colorWhite;
+        background: $colorWhite;
+        z-index: 50;
+        box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.06);
     }
 
     &__item {
