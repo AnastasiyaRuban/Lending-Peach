@@ -19,10 +19,11 @@ const swiper = new Swiper('.corporate-life__swiper', {
   },
 });
 
-bullets.forEach((bullet) => {
-  const parentWidth = bullet.parentNode.getBoundingClientRect().width;
-  const bulletWidth = `${
-    (parentWidth - (bullets.length - 1) * 10) / bullets.length
-  }px`;
-  bullet.style.width = bulletWidth;
-});
+// bullets.forEach((bullet) => {
+//   const parentWidth = bullet.parentNode.getBoundingClientRect().width;
+//   const bulletWidth = `${
+//     (parentWidth - (bullets.length - 1) * 10) / bullets.length
+//   }px`;
+//   console.log(bulletWidth);
+//   bullet.style.width = bulletWidth;
+// });
