@@ -1,5 +1,5 @@
 .directions {
-    padding-bottom: 91px;
+    padding-bottom: 100px;
     padding-top: 50px;
     padding-left: 0;
     padding-right: 0;
@@ -28,7 +28,7 @@
     &__title-wrapper {
         display: flex;
         align-items: center;
-        height: 80px;
+        min-height: 80px;
         width: 100%;
     }
 
