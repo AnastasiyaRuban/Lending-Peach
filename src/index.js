@@ -1,5 +1,7 @@
 import './offices';
 import './swiper';
+import 'simplebar';
+import 'simplebar/dist/simplebar.css';
 import './styles/main.scss';
 
 window.addEventListener('resize', function () {

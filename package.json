@@ -16,6 +16,7 @@
     "@babel/core": "^7.20.12",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/preset-env": "^7.20.2",
+    "@types/simplebar": "^5.3.3",
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
@@ -43,6 +44,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "simplebar": "^6.2.1",
     "swiper": "^9.0.5"
   }
 }
