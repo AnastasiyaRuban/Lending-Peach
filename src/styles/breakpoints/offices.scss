@@ -1,12 +1,18 @@
 @media (max-width: 1024px) {
     .offices {
         &__menu {
+            padding-bottom: 0;
         }
 
         &__select {
         }
 
         &__tabs {
+            justify-content: flex-start;
+            padding-bottom: 10px;
+            flex-wrap: nowrap;
+            padding-bottom: 10px;
+            overflow-x: auto;
         }
 
         &__map {
@@ -54,7 +60,8 @@
     }
     .tabs {
         &__button {
-            &_active {
+            &_active::after {
+                // bottom: 0;
             }
         }
     }
