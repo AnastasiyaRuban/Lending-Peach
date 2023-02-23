@@ -120,23 +120,48 @@
         }
 
         &__list {
+            row-gap: 15px;
+            box-shadow: 0px 7px 10px -9px rgba(0, 0, 0, 0.6);
         }
 
         &__item {
+        }
+
+        &__item:first-child .option__list {
+            display: block;
         }
     }
 
     .option {
         &__placeholder {
+            position: relative;
+            font-size: 14px;
+            line-height: 14px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &__placeholder::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            border: 6px solid transparent;
+            border-top: 6px solid $colorMain;
+            right: -19px;
+            transition: all 0.3s ease-in-out;
         }
 
         &__list {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
         }
 
         &__item {
         }
 
         &__city {
+            font-size: 14px;
+            line-height: 14px;
         }
     }
     .tabs {
@@ -150,5 +175,22 @@
         &__button:not(:last-child) {
             margin-right: 17px;
         }
+    }
+
+    .select.active {
+        overflow: visible;
+    }
+
+    .option__placeholder:hover {
+        color: $colorBtnHover;
+    }
+
+    .option__placeholder.active::after {
+        transform: rotate(180deg);
+        bottom: 4px;
+    }
+
+    .option__placeholder.active {
+        color: $colorBordo;
     }
 }
