@@ -1,19 +1,23 @@
 import './offices';
 import './swiper';
-import 'simplebar';
-import 'simplebar/dist/simplebar.css';
+import Scrollbar from 'smooth-scrollbar';
 import './styles/main.scss';
 
-window.addEventListener('resize', function () {
-  document.location.reload();
-});
-
+// Scrollbar.init(document.querySelector('#my-scrollbar'), options);
 const viewPort = document.documentElement.clientWidth;
 const directionBlock = document.querySelectorAll('.direction');
 const accordion = document.querySelectorAll('.direction__title-wrapper');
 const accordionContents = document.querySelectorAll('.direction__description');
 let contentMaxHeight = 0;
 let contentHeights = [];
+
+if (viewPort <= 1024) {
+  Scrollbar.initAll();
+}
+
+window.addEventListener('resize', function () {
+  document.location.reload();
+});
 
 accordionContents.forEach((content) => {
   contentHeights.push(content.scrollHeight);

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>SoftLine</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
 
@@ -91,7 +91,7 @@
         <section class="offices ">
           <div class="offices__menu container">
             <button class="select__placeholder button-reset">Офисы Softline</button>
-            <div class="" data-simplebar>
+            <div class="" data-scrollbar>
               <div class="offices__tabs tabs" >
                 <button class="tabs__button button-reset tabs__button_active" data-tab-name="all">Все</button>
                 <button class="tabs__button button-reset" data-tab-name="moskow">Москва</button>
@@ -104,7 +104,6 @@
                 <button class="tabs__button button-reset" data-tab-name="east">Дальний восток</button>
               </div>
             </div>
-            
           </div>
          <div class="offices__select select">
               <ul class="select__list list-reset">
@@ -225,7 +224,9 @@
                   </ul>
                 </li>
              </ul>
-          </div> <div class="offices__map">
+          </div> 
+          <div class="offices__map-wrapper">
+           <div class="offices__map" data-scrollbar>
             <img class="offices__map-active" src="images/offices/all.png" alt="" data-path="all">
             <img src="images/offices/moskow.png" alt="" data-path="moskow">
             <img src="images/offices/center.png" alt="" data-path="center">
@@ -236,7 +237,9 @@
             <img src="images/offices/siberia.png" alt="" data-path="siberia">
             <img src="images/offices/east.png" alt="" data-path="east">
             <h3  class="offices__map_plug title">Вот-вот здесь появится информация</h3>
-          </div> 
+          </div>  
+          </div>
+          
           
         </section>
         <section class="mission container">

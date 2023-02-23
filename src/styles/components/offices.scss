@@ -1,7 +1,8 @@
 .offices {
     position: relative;
     padding-top: 49px;
-    padding-bottom: 18px;
+    padding-bottom: 19px;
+    scrollbar-width: thin;
     &__menu {
         @include flex-all-sb;
         position: relative;
