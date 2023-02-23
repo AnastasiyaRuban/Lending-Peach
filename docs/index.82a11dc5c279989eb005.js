@@ -15212,10 +15212,9 @@ var SmoothScrollbar = /** @class */ (function (_super) {
 
 
 var viewPort = document.documentElement.clientWidth;
-// window.addEventListener('resize', function () {
-//   document.location.reload();
-// });
-
+window.addEventListener('resize', function () {
+  document.location.reload();
+});
 if (viewPort <= 1024) {
   smooth_scrollbar.initAll();
 }
