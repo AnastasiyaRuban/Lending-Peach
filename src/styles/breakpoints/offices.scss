@@ -93,6 +93,10 @@
         &__map {
             max-height: 364px;
             padding: 0;
+            &_plug {
+                font-size: 16px;
+                line-height: 1;
+            }
         }
         &__map img {
             max-width: 862px;

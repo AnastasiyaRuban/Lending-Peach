@@ -19,46 +19,12 @@ subSelectBtn.forEach((btn) => {
       select.style.paddingTop = 0;
       select.style.paddingBottom = 0;
     } else {
-      // select.style.height = select.scrollHeight + 20 + 'px';
       select.style.maxHeight = select.scrollHeight + 20 + 'px';
       select.style.paddingBottom = 10 + 'px';
       select.style.paddingTop = 10 + 'px';
     }
   });
 });
-
-function getSelectTopValue() {
-  const viewPort = document.documentElement.clientWidth;
-  const parentPaddingTop = getComputedStyle(select.parentNode).paddingTop.slice(
-    0,
-    -2
-  );
-  const hightMenu = getComputedStyle(
-    select.previousElementSibling
-  ).height.slice(0, -2);
-  const hightTabsBlock = getComputedStyle(
-    document.querySelector('.offices__tabs-wrapper')
-  ).height.slice(0, -2);
-
-  const gapInMenuBlock = getComputedStyle(
-    document.querySelector('.offices__menu')
-  ).rowGap.slice(0, -2);
-
-  const gapTop = 20;
-  if (viewPort > 425) {
-    console.log(42);
-    return Number(parentPaddingTop) + Number(hightMenu) + gapTop + 'px';
-  }
-  return (
-    Number(parentPaddingTop) +
-    Number(hightMenu) -
-    hightTabsBlock -
-    gapInMenuBlock +
-    'px'
-  );
-}
-
-select.style.top = getSelectTopValue();
 
 tabBtns.forEach((element) => {
   const tabName = element.getAttribute('data-tab-name');
@@ -106,7 +72,6 @@ selectBtn.addEventListener('click', () => {
     select.style.paddingTop = 0;
     select.style.paddingBottom = 0;
   } else {
-    // select.style.height = select.scrollHeight + 20 + 'px';
     select.style.maxHeight = select.scrollHeight + 20 + 'px';
     select.style.paddingBottom = 10 + 'px';
     select.style.paddingTop = 10 + 'px';
@@ -124,10 +89,41 @@ cityBtn.forEach((btn) => {
         btn.setAttribute('disabled', true);
       } else btn.removeAttribute('disabled');
     });
-
+    select.style.maxHeight = null;
     selectBtn.classList.toggle('active');
     select.classList.toggle('active');
     mapBlock.classList.toggle('open');
     tabs.classList.toggle('open');
   });
 });
+
+function getSelectTopValue() {
+  const viewPort = document.documentElement.clientWidth;
+  const parentPaddingTop = getComputedStyle(select.parentNode).paddingTop.slice(
+    0,
+    -2
+  );
+  const hightMenu = getComputedStyle(
+    select.previousElementSibling
+  ).height.slice(0, -2);
+  const hightTabsBlock = getComputedStyle(
+    document.querySelector('.offices__tabs-wrapper')
+  ).height.slice(0, -2);
+
+  const gapInMenuBlock = getComputedStyle(
+    document.querySelector('.offices__menu')
+  ).rowGap.slice(0, -2);
+
+  const gapTop = 20;
+  if (viewPort > 425) {
+    return Number(parentPaddingTop) + Number(hightMenu) + gapTop + 'px';
+  }
+  return (
+    Number(parentPaddingTop) +
+    Number(hightMenu) -
+    hightTabsBlock -
+    gapInMenuBlock +
+    'px'
+  );
+}
+select.style.top = getSelectTopValue();
