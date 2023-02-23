@@ -3,6 +3,8 @@
     padding-top: 49px;
     padding-bottom: 19px;
     scrollbar-width: thin;
+    max-width: 1250px;
+    margin: 0 auto;
     &__menu {
         @include flex-all-sb;
         position: relative;

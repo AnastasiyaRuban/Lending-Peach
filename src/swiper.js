@@ -3,8 +3,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const bullets = document.querySelectorAll('.swiper-pagination-bullet');
-
 const swiper = new Swiper('.corporate-life__swiper', {
   modules: [Navigation, Pagination],
   loop: true,
@@ -18,12 +16,3 @@ const swiper = new Swiper('.corporate-life__swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
-
-// bullets.forEach((bullet) => {
-//   const parentWidth = bullet.parentNode.getBoundingClientRect().width;
-//   const bulletWidth = `${
-//     (parentWidth - (bullets.length - 1) * 10) / bullets.length
-//   }px`;
-//   console.log(bulletWidth);
-//   bullet.style.width = bulletWidth;
-// });

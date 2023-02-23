@@ -3,7 +3,6 @@ import './swiper';
 import Scrollbar from 'smooth-scrollbar';
 import './styles/main.scss';
 
-// Scrollbar.init(document.querySelector('#my-scrollbar'), options);
 const viewPort = document.documentElement.clientWidth;
 const directionBlock = document.querySelectorAll('.direction');
 const accordion = document.querySelectorAll('.direction__title-wrapper');
