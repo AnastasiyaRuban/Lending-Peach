@@ -10,40 +10,48 @@ const subSelectBtn = document.querySelectorAll('.option__placeholder');
 const subSelect = document.querySelectorAll('.option__list');
 
 subSelectBtn.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const select = btn.nextElementSibling;
+  btn.addEventListener('click', showSubSelect);
+});
+selectBtn.addEventListener('click', showSelect);
 
-    btn.classList.toggle('active');
-    if (select.style.maxHeight) {
-      select.style.maxHeight = null;
-      select.style.paddingTop = 0;
-      select.style.paddingBottom = 0;
-    } else {
-      select.style.maxHeight = select.scrollHeight + 20 + 'px';
-      select.style.paddingBottom = 10 + 'px';
-      select.style.paddingTop = 10 + 'px';
-    }
-  });
+cityBtn.forEach((btn) => {
+  btn.addEventListener('click', showPlug);
 });
 
-tabBtns.forEach((element) => {
-  const tabName = element.getAttribute('data-tab-name');
-
-  element.addEventListener('click', (e) => {
-    tabBtns.forEach((btn) => {
-      btn.classList.remove('tabs__button_active');
-    });
-    element.classList.add('tabs__button_active');
-    mapPlug.style.display = 'none';
-    maps.forEach((map) => {
-      if (map.getAttribute('data-path') === tabName) {
-        map.classList.add('offices__map-active');
-      } else map.classList.remove('offices__map-active');
-    });
-  });
+tabBtns.forEach((btn) => {
+  btn.addEventListener('click', showMap);
 });
 
-selectBtn.addEventListener('click', () => {
+function showMap(btn) {
+  const tabName = btn.currentTarget.getAttribute('data-tab-name');
+  tabBtns.forEach((btn) => {
+    btn.classList.remove('tabs__button_active');
+  });
+  btn.currentTarget.classList.add('tabs__button_active');
+  mapPlug.style.display = 'none';
+  maps.forEach((map) => {
+    if (map.getAttribute('data-path') === tabName) {
+      map.classList.add('offices__map-active');
+    } else map.classList.remove('offices__map-active');
+  });
+}
+
+function showSubSelect(btn) {
+  const select = btn.currentTarget.nextElementSibling;
+  btn.currentTarget.classList.toggle('active');
+
+  if (select.style.maxHeight) {
+    select.style.maxHeight = null;
+    select.style.paddingTop = 0;
+    select.style.paddingBottom = 0;
+  } else {
+    select.style.maxHeight = select.scrollHeight + 20 + 'px';
+    select.style.paddingBottom = 10 + 'px';
+    select.style.paddingTop = 10 + 'px';
+  }
+}
+
+function showSelect() {
   subSelect.forEach((subSelect) => {
     subSelect.style.maxHeight = null;
     subSelect.style.paddingTop = 0;
@@ -76,26 +84,25 @@ selectBtn.addEventListener('click', () => {
     select.style.paddingBottom = 10 + 'px';
     select.style.paddingTop = 10 + 'px';
   }
-});
+}
 
-cityBtn.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    maps.forEach((map) => {
-      map.classList.remove('offices__map-active');
-      mapPlug.style.display = 'block';
-    });
-    tabBtns.forEach((btn) => {
-      if (!btn.getAttribute('disabled')) {
-        btn.setAttribute('disabled', true);
-      } else btn.removeAttribute('disabled');
-    });
-    select.style.maxHeight = null;
-    selectBtn.classList.toggle('active');
-    select.classList.toggle('active');
-    mapBlock.classList.toggle('open');
-    tabs.classList.toggle('open');
+function showPlug() {
+  maps.forEach((map) => {
+    map.classList.remove('offices__map-active');
+    mapPlug.style.display = 'block';
   });
-});
+  tabBtns.forEach((btn) => {
+    btn.classList.remove('tabs__button_active');
+    if (!btn.getAttribute('disabled')) {
+      btn.setAttribute('disabled', true);
+    } else btn.removeAttribute('disabled');
+  });
+  select.style.maxHeight = null;
+  selectBtn.classList.toggle('active');
+  select.classList.toggle('active');
+  mapBlock.classList.toggle('open');
+  tabs.classList.toggle('open');
+}
 
 function getSelectTopValue() {
   const viewPort = document.documentElement.clientWidth;
