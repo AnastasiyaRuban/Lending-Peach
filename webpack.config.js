@@ -76,7 +76,7 @@ module.exports = {
   ],
   devServer: {
     watchFiles: path.resolve(__dirname, 'src'),
-    port: 3000,
+    port: 4000,
   },
   optimization: {
     minimizer: [
