@@ -8,6 +8,8 @@ const maps = document.querySelectorAll('.offices__map > img');
 const mapPlug = document.querySelector('.offices__map_plug');
 const subSelectBtn = document.querySelectorAll('.option__placeholder');
 const subSelect = document.querySelectorAll('.option__list');
+const mapWrapper = document.querySelector('.offices__map-wrapper');
+const plugWrapper = document.querySelector('.plug-wrapper');
 
 subSelectBtn.forEach((btn) => {
   btn.addEventListener('click', showSubSelect);
@@ -23,6 +25,7 @@ tabBtns.forEach((btn) => {
 });
 
 function showMap(btn) {
+  plugWrapper.style.display = 'none';
   const tabName = btn.currentTarget.getAttribute('data-tab-name');
   tabBtns.forEach((btn) => {
     btn.classList.remove('tabs__button_active');
@@ -72,7 +75,7 @@ function showSelect() {
 
   selectBtn.classList.toggle('active');
   select.classList.toggle('active');
-  mapBlock.classList.toggle('open');
+  mapWrapper.classList.toggle('open');
   tabs.classList.toggle('open');
 
   if (select.style.maxHeight) {
@@ -87,6 +90,7 @@ function showSelect() {
 }
 
 function showPlug() {
+  plugWrapper.style.display = 'flex';
   maps.forEach((map) => {
     map.classList.remove('offices__map-active');
     mapPlug.style.display = 'block';
@@ -100,7 +104,7 @@ function showPlug() {
   select.style.maxHeight = null;
   selectBtn.classList.toggle('active');
   select.classList.toggle('active');
-  mapBlock.classList.toggle('open');
+  mapWrapper.classList.toggle('open');
   tabs.classList.toggle('open');
 }
 

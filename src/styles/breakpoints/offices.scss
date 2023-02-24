@@ -163,16 +163,9 @@
             transition: all 0.3s ease-in-out;
         }
 
-        &__item {
-        }
-
         &__city {
             font-size: 14px;
             line-height: 14px;
-        }
-
-        &__city:hover {
-            color: $colorBtnHover;
         }
     }
     .tabs {

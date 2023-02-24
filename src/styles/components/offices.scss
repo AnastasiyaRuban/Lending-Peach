@@ -168,6 +168,10 @@
     &__item:not(:last-child) {
         margin-bottom: 10px;
     }
+
+    &__city:hover {
+        color: $colorBtnHover;
+    }
 }
 
 .select__placeholder.active:after {
@@ -176,17 +180,17 @@
 }
 
 .tabs.open,
-.offices__map.open {
+.offices__map-wrapper.open .offices__map {
     opacity: 0.3;
 }
 
 .plug-wrapper {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
